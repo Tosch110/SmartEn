@@ -11,9 +11,7 @@ setInterval(function() {
     var totalRaw = 0;
     var totalVolt = 0;
     var totalPerc = 0;
-
-
-
+    
     for(var x=0; x<10000;x++) {
 
 
