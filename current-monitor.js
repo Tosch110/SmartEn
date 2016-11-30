@@ -1,9 +1,11 @@
 var raspi = require('raspi-io');
 var five = require("johnny-five");
 var scale = five.Fn.scale;
-var board = new five.Board();
+var board = new five.Board({
+    io: new raspi()
+});
 // Measured with multimeter @ 4.440V
-var VCC = 4440;
+var VCC = 3300;
 
 function toMV(value) {
     // Scale an ADC reading to milli-volts.
