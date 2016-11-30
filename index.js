@@ -30,7 +30,7 @@ setInterval(function() {
     console.log("avgVolt:\t" + avgVolt);
 
     //var mV = (avgVolt * 1000) - 100; // -100 because 0mA starts at 100 mV
-    var ampere = ((avgVolt - 1.65) * 100) / 1000;
+    var ampere = ((avgRaw - 510) / 19);
     console.log("Ampere:\t" + ampere);
 
 
