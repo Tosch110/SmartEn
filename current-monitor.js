@@ -35,7 +35,7 @@ board.on("ready", function() {
     // This is a smart way to keep track of your physical
     // devices throughout the program.
     var acs = new five.Sensor({
-        pin: "0",
+        pin: "A0",
         freq: 1
     });
     var time = Date.now();
