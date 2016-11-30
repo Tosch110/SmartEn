@@ -13,8 +13,8 @@ adc.readVoltage(channel, function(voltage) {
         var mV = voltage * 1000;
         console.log("Voltage:\t" + voltage);
 
-        var difference = mV - voltOffset;
-        console.log("Ampere:\t" + difference);
+        var ampere = (mV - voltOffset) / 100;
+        console.log("Ampere:\t" + ampere);
 
 
 
