@@ -36,10 +36,10 @@ setInterval(function() {
 
 
     console.log("Raw value:\t" + avgRaw);
+    
+    console.log("avgVolt:\t" + avgVolt);
 
     var mV = avgVolt * 1000;
-    console.log("avgVolt:\t" + voltage);
-
     var ampere = (mV - voltOffset) / 100;
     console.log("Ampere:\t" + ampere);
 
