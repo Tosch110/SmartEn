@@ -1,0 +1,16 @@
+{
+  "name": "raspmeasure",
+  "version": "1.0.0",
+  "description": "Raspberry SPI port measures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "raspi",
+    "energy",
+    "measurement"
+  ],
+  "author": "tosch",
+  "license": "GPL-2.0"
+}
