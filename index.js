@@ -14,19 +14,23 @@ setInterval(function() {
 
     for(var x=0; x<100;x++) {
 
-        adc.readRawValue(channel, function(value) {
-            totalRaw = totalRaw + value;
-        });
+        setTimeout(function() {
 
-        adc.readVoltage(channel, function(voltage) {
+            adc.readRawValue(channel, function(value) {
+                totalRaw = totalRaw + value;
+            });
 
-            totalVolt = totalVolt + voltage;
+            adc.readVoltage(channel, function(voltage) {
 
-        });
+                totalVolt = totalVolt + voltage;
 
-        adc.readNormalizedValue(channel, function(normValue) {
-            totalPerc = totalPerc + normValue;
-        });
+            });
+
+            adc.readNormalizedValue(channel, function(normValue) {
+                totalPerc = totalPerc + normValue;
+            });
+
+        }, 10);
 
     }
 
@@ -36,7 +40,7 @@ setInterval(function() {
 
 
     console.log("Raw value:\t" + avgRaw);
-    
+
     console.log("avgVolt:\t" + avgVolt);
 
     var mV = avgVolt * 1000;
@@ -47,5 +51,5 @@ setInterval(function() {
     console.log("Percents:\t" + (avgPerc * 100));
 
 
-}, 2000);
+}, 3000);
 
