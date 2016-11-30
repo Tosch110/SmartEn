@@ -14,7 +14,6 @@ setInterval(function() {
 
     for(var x=0; x<100;x++) {
 
-        setTimeout(function() {
 
             adc.readRawValue(channel, function(value) {
                 totalRaw = totalRaw + value;
@@ -30,7 +29,6 @@ setInterval(function() {
                 totalPerc = totalPerc + normValue;
             });
 
-        }, 10);
 
     }
 
