@@ -32,9 +32,9 @@ setInterval(function() {
 
     }
 
-    var avgVolt = totalVolt / 100;
-    var avgRaw = totalRaw / 100;
-    var avgPerc = totalPerc / 100;
+    var avgVolt = totalVolt / 1000;
+    var avgRaw = totalRaw / 1000;
+    var avgPerc = totalPerc / 1000;
 
 
     console.log("Raw value:\t" + avgRaw);
