@@ -12,7 +12,7 @@ setInterval(function() {
     var totalVolt = 0;
     var totalPerc = 0;
 
-    for(var x=0; x<100;x++) {
+    for(var x=0; x<1000;x++) {
 
 
             adc.readRawValue(channel, function(value) {
