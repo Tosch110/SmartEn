@@ -1,3 +1,4 @@
+var raspi = require('raspi-io');
 var five = require("johnny-five");
 var scale = five.Fn.scale;
 var board = new five.Board();
