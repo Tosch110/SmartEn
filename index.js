@@ -3,7 +3,7 @@ var McpAdc = require('mcp-adc');
 var adc = new McpAdc.Mcp3008();
 
 var channel = 0;
-var voltOffset = 510;
+var voltOffset = 0.0510;
 
 setInterval(function() {
 
@@ -29,8 +29,8 @@ setInterval(function() {
 
     console.log("avgVolt:\t" + avgVolt);
 
-   // var mV = (avgVolt * 1000) - 100; // -100 because 0mA starts at 100 mV
-    var ampere = (mV - voltOffset) * 10000;
+    //var mV = (avgVolt * 1000) - 100; // -100 because 0mA starts at 100 mV
+    var ampere = ((avgVolt - 1.65) * 100) / 1000;
     console.log("Ampere:\t" + ampere);
 
 
