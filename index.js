@@ -32,7 +32,7 @@ setInterval(function() {
     console.log("avgVolt:\t" + avgVolt);
 
     var mV = avgVolt * 1000;
-    var ampere = (avgVolt - voltOffset) / 10;
+    var ampere = (avgVolt - voltOffset) * 10;
     console.log("Ampere:\t" + ampere);
 
 
