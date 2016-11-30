@@ -3,7 +3,7 @@ var McpAdc = require('mcp-adc');
 var adc = new McpAdc.Mcp3208();
 
 var channel = 0;
-var voltOffset = 1650;
+var voltOffset = 1.680;
 
 setInterval(function() {
 
@@ -11,7 +11,9 @@ setInterval(function() {
     var totalRaw = 0;
     var totalVolt = 0;
     var totalPerc = 0;
-    
+
+
+
     for(var x=0; x<10000;x++) {
 
 
@@ -29,8 +31,8 @@ setInterval(function() {
 
     console.log("avgVolt:\t" + avgVolt);
 
-
-    var ampere = (avgVolt / 10) - 0.1;
+    var mV = avgVolt * 1000;
+    var ampere = (avgVolt - voltOffset) / 10;
     console.log("Ampere:\t" + ampere);
 
 
